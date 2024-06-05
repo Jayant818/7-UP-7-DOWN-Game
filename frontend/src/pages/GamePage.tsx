@@ -69,7 +69,11 @@ const GamePage: React.FC = () => {
 							</Typography>
 						</>
 					)}
-					<BetForm onBet={handleBet} />
+					{points > 0 ? (
+						<BetForm onBet={handleBet} />
+					) : (
+						<p className="text-lg text-red-500">No Points Left</p>
+					)}
 				</CardContent>
 			</Card>
 		</div>
